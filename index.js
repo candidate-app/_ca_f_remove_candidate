@@ -25,6 +25,8 @@ const removeCandidate = async (req, res) => {
       return obj.id == id;
     });
 
+    
+
     if (index !== -1) {
       localDB.splice(index, 1);
       fs.writeFileSync(DB_FILE, JSON.stringify(localDB));
